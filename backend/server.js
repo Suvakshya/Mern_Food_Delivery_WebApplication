@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename)
 //Middleware
 app.use(cors({
     origin:(origin,callback) => {
-        const allowedOrigins = ['http://localhost:5173','http://localhost:5174'];
+        const allowedOrigins = ['https://mern-food-delivery-webapplication.onrender.com','https://mern-food-delivery-webapplication-admin.onrender.com/'];
         if(!origin || allowedOrigins.includes(origin)){
             callback(null,true)
         }
