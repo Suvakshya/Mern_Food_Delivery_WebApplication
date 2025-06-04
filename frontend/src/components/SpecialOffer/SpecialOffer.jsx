@@ -14,7 +14,7 @@ const SpecialOffer = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/items');
+        const response = await axios.get('https://mern-food-delivery-webapplication-backend.onrender.com/api/items');
         const data = response.data?.data || [];
         
         if (!Array.isArray(data)) {
@@ -27,7 +27,7 @@ const SpecialOffer = () => {
           imageUrl: item.image 
             ? item.image.startsWith('http') 
               ? item.image 
-              : `http://localhost:4000/uploads/${item.image}`
+              : `https://mern-food-delivery-webapplication-backend.onrender.com/uploads/${item.image}`
             : item.imageUrl
         }));
         

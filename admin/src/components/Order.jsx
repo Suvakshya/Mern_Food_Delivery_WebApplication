@@ -17,7 +17,7 @@ const Order = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/orders/getall",
+          "https://mern-food-delivery-webapplication-backend.onrender.com/api/orders/getall",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -59,7 +59,7 @@ const Order = () => {
 
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      await axios.put(`http://localhost:4000/api/orders/getall/${orderId}`, {
+      await axios.put(`https://mern-food-delivery-webapplication-backend.onrender.com/api/orders/getall/${orderId}`, {
         status: newStatus,
       });
       setOrders(
@@ -172,7 +172,7 @@ const Order = () => {
                               className="flex items-center gap-3 p-2 rounded-lg"
                             >
                               <img
-                                src={`http://localhost:4000${itm.item.imageUrl}`}
+                                src={`https://mern-food-delivery-webapplication-backend.onrender.com${itm.item.imageUrl}`}
                                 alt={itm.item.name}
                                 className="w-10 h-10 object-cover rounded-lg"
                               />

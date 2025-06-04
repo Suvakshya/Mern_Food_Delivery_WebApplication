@@ -55,7 +55,7 @@ const AddItems = () => {
         payload.append('image', formData.image);
       }
 
-      const res = await axios.post("http://localhost:4000/api/items", payload, {
+      const res = await axios.post("https://mern-food-delivery-webapplication-backend.onrender.com/api/items", payload, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

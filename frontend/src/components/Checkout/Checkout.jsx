@@ -29,7 +29,7 @@ const Checkout = () => {
             setLoading(true);
 
             if(paymentStatus === 'success' && sessionId){
-                axios.post('http://localhost:4000/api/orders/confirm',
+                axios.post('https://mern-food-delivery-webapplication-backend.onrender.com/api/orders/confirm',
                     {sessionId},
                     {headers:authHeaders})
                     .then(({data})=>{
@@ -77,14 +77,14 @@ const handleSubmit = async e=>{
     try {
         if(formData.paymentMethod === 'online'){
             const {data} = await axios.post(
-                'http://localhost:4000/api/orders',
+                'https://mern-food-delivery-webapplication-backend.onrender.com/api/orders',
                 payload,
                 {headers:authHeaders}
             );
             window.location.href = data.checkoutUrl
         }else{
             const {data} = await axios.post(
-                'http://localhost:4000/api/orders',
+                'https://mern-food-delivery-webapplication-backend.onrender.com/api/orders',
                 payload,
                 {headers:authHeaders}
             )

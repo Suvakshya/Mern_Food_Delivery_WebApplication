@@ -11,7 +11,7 @@ const List = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/items');
+        const response = await axios.get('https://mern-food-delivery-webapplication-backend.onrender.com/api/items');
         
         // Handle response data structure
         const data = response.data?.data || [];
@@ -36,7 +36,7 @@ const List = () => {
   const handleDelete = async (itemId) => {
     if (!window.confirm('Are you sure you want to delete this item?')) return;
     try {
-      await axios.delete(`http://localhost:4000/api/items/${itemId}`);
+      await axios.delete(`https://mern-food-delivery-webapplication-backend.onrender.com/api/items/${itemId}`);
       setItems(prev => prev.filter(item => item._id !== itemId));
     } catch (error) {
       console.error('Error deleting item:', error);

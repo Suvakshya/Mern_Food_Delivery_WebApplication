@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { FaCheckCircle, FaEyeSlash, FaLock, FaEye, FaArrowRight, FaUserPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const url = 'http://localhost:4000';
+const url = 'https://mern-food-delivery-webapplication-backend.onrender.com';
 
 const Login = ({ onLoginSuccess, onClose }) => {
   const [showToast, setShowToast] = useState({ visible: false, message: '', isError: false });

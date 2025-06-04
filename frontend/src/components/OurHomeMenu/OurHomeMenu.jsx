@@ -27,7 +27,7 @@ const OurHomeMenu = () => {
         setLoading(true);
         setError(null);
         
-        const res = await axios.get('http://localhost:4000/api/items');
+        const res = await axios.get('https://mern-food-delivery-webapplication-backend.onrender.com/api/items');
         
         // Handle different API response structures
         const items = Array.isArray(res.data) 
@@ -52,7 +52,7 @@ const OurHomeMenu = () => {
           if (item.image) {
             imageUrl = item.image.startsWith('http') 
               ? item.image 
-              : `http://localhost:4000/uploads/${item.image}`;
+              : `https://mern-food-delivery-webapplication-backend.onrender.com/uploads/${item.image}`;
           } else if (item.imageUrl) {
             imageUrl = item.imageUrl;
           }
